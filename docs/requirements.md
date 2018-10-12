@@ -26,7 +26,7 @@
   and discuss issues, music, and trends going on in Hip Hop and Pop culture
   would be a great avenue for self-expression for generations to come.
 
-###You would be able to:
+##You would be able to:\
   - be updated on whats new, and see your friends' opinions on trending issues,
     fashion statements, and mainstream/underground music
   - like, comment, and follow other users' profiles to network and gain new perspective
@@ -70,9 +70,9 @@ login info
 
 ## How pages will look
 
-- One main pages
+- One main page
 - Buttons leading to links of other pages
 - Personal pages
 - Music + gossip
 - trends
-- Main stream Vs. Underground 
+- Main stream Vs. Underground
