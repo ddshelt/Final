@@ -1,6 +1,6 @@
-#Final Ideas
+# Final Ideas
 
-##Project Obectives
+## Project Obectives
 - create a new way for people to share, like, and comment on music
 - to help Hip Hop fans weed out quality projects
 - display the top 5 most listened to albums (current)
@@ -26,7 +26,7 @@
   and discuss issues, music, and trends going on in Hip Hop and Pop culture
   would be a great avenue for self-expression for generations to come.
 
-##You would be able to:\
+### You would be able to:
   - be updated on whats new, and see your friends' opinions on trending issues,
     fashion statements, and mainstream/underground music
   - like, comment, and follow other users' profiles to network and gain new perspective
