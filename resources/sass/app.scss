@@ -1,0 +1,36 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Poor+Story');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.around {
+  border-color: #1F2124 !important;
+  border: 10px solid;
+  background-color: #1F2124
+}
+
+.header {
+  text-align: center;
+  font-family: 'Poor Story', Sans-serif;
+  font-size: 80px;
+}
+
+div.height{
+  height: 250px;
+}
+
+.center {
+  margin-top: 50px;
+  margin-left: 185px;
+}
