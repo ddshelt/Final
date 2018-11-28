@@ -10,10 +10,22 @@
     This is where you will come to find the Underground!!
     <div class="container-fluid around">
       <div class="row justify-content-center">
-            @foreach($albums as $album)
+            @foreach($items as $item)
+
             <div class= "card-deck">
               <div class="col card ml-4 mr-4">
-                <p><img class="mx-auto d-block" src="{{ $album }}" alt="$albums" style="width:200px; height:200px;"></p>
+                <p><img class="mx-auto d-block" src="{{ $albums[$loop->index] }}" alt="$items" style="width:175px; height:175px;"></p>
+
+                <div class="comments text-center">
+
+
+                   @foreach($item->comments as $reaction)
+                       <li>{{ $reaction->comment }}</li>
+                   @endforeach
+
+
+                </div>
+
               </div>
             </div>
             @endforeach
@@ -28,15 +40,28 @@
 
         </div>
 
+
         <form class="" method="post" action="/contents">
           {{csrf_field()}}
           <div class= "form-group text-center">
-            <label for ="itemtitle"> What ya got to say</label>
-            <input id="itemtitle" class="center" type="text" style="width:500px; height:100px;"> </input>
+            <label for ="itemcomment"> What ya got to say</label>
+            <input name="itemcomment" id="itemcomment" placeholder="How do you feel about the Top 5?" class="center text-center" type="text" style="width:500px; height:100px;"> </input>
           </div>
-          <div class="text-center">
+          <!-- <div class="text-center">
             <button type= "submit" class="btn btn-success"> Post it!</button>
-          </div>
+
+            <select name="itemlist">
+              <option value="Damn">DAMN</option>
+              <option value="Victory Lap">Victory Lap</option>
+              <option value="Culture II">Culture II</option>
+              <option value="Invasion of Privacy">Invasion of Privacy</option>
+              <option value="Astro World">AstroWorld</option>
+            </select>
+          </div> -->
+        </form>
+
+        <p><a href="/contents/create"> Tell us how you feel! </a></p>
+
 
       <div class="height"></div>
 

@@ -8,4 +8,8 @@ use Carbon\Carbon;
 class Reaction extends Model
 {
     //
+    public function items(){
+
+      return $this->belongsTo('App\Item');
+    }
 }

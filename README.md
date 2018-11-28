@@ -56,4 +56,4 @@
 - Database should update once php artisan migrate:refresh --seed is ran
 - If fatal: CRLF would be replaced by LF in public/js/app.js. appears:
   + delete public/js/app.js
-  + run: npm run dev
+  + run: npm run dev or prod 

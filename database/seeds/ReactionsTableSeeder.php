@@ -19,9 +19,9 @@ class ReactionsTableSeeder extends Seeder
         $dejah = \App\User::where('name', 'Dejah')->first();
 
         $item = \App\Item::where('subtitle', 'by Kendrick Lamar')->first();
-        $itemTwo = \App\Item::where('subtitle', 'by Nipsey Hussle')->first();
+        $itemTwo = \App\Item::where('subtitle', 'by Cardi B')->first();
         $itemThree = \App\Item::where('subtitle', 'by Migos')->first();
-        $itemFour = \App\Item::where('subtitle', 'by Cardi B')->first();
+        $itemFour = \App\Item::where('subtitle', 'by Nipsey Hussle')->first();
         $itemFive = \App\Item::where('subtitle', 'by Travis Scott')->first();
 
 

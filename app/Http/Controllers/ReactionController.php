@@ -24,6 +24,7 @@ class ReactionController extends Controller
     public function create()
     {
         //
+        return view('contents.create');
     }
 
     /**
@@ -35,11 +36,17 @@ class ReactionController extends Controller
     public function store(Request $request)
     {
         //
+
+
         $reaction = new \App\Reaction;
-        $reaction->comment = $request->input('itemtitle');
+        $reaction->comment = $request->input('itemcomment');
+        $reaction->item_id = $request->input('itemlist');
+        $reaction->user_id = \Auth::id();
         $reaction->save();
 
-        $request->session()>flash('status', "A new comment was added");
+        $request->session()->flash('status', "A new comment was added");
+
+        return redirect('/contents/home');
     }
 
     /**

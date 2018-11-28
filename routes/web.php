@@ -15,21 +15,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/contents', function (){
-    return view('contents.index');
-});
 
 Route::get('/contents/home', function (){
 
   $albums = [
-    'https://respect-mag.com/wp-content/uploads/2018/04/DAMN.kendrick.jpg',
-    'https://www.rap-up.com/app/uploads/2018/03/cardi-b-invasion-of-privacy.jpg', 'https://imagesaws.juno.co.uk/full/CS679658-01A-BIG.jpg',
-    'http://www.xxlmag.com/files/2017/12/Nipsey-hussle-victory-lap.jpg',
-    'https://i.redd.it/wmz0gkv8lcd11.jpg'
+      'https://respect-mag.com/wp-content/uploads/2018/04/DAMN.kendrick.jpg',
+      'https://www.rap-up.com/app/uploads/2018/03/cardi-b-invasion-of-privacy.jpg',
+      'https://imagesaws.juno.co.uk/full/CS679658-01A-BIG.jpg',
+      'http://www.xxlmag.com/files/2017/12/Nipsey-hussle-victory-lap.jpg',
+      'https://i.redd.it/wmz0gkv8lcd11.jpg'
   ];
 
+ $reactions =  \App\Reaction::get();
 
-  return view('contents.home', compact('albums'));
+ $items = \App\Item::get();
+
+
+  return view('contents.home', compact('albums', 'reactions', 'items'));
 
 
 });
@@ -63,5 +65,7 @@ Route::get('/contents/fashion', function (){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('/contents', 'ReactionController');
 
 // Route::resource('contents', 'ItemController')->middleware('auth');
