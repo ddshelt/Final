@@ -63,3 +63,5 @@ Route::get('/contents/fashion', function (){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Route::resource('contents', 'ItemController')->middleware('auth');

@@ -27,7 +27,17 @@
           </div> -->
 
         </div>
-        <input class="center" type="text" style="width:1000px; height:100px;"> </input>
+
+        <form class="" method="post" action="/contents">
+          {{csrf_field()}}
+          <div class= "form-group text-center">
+            <label for ="itemtitle"> What ya got to say</label>
+            <input id="itemtitle" class="center" type="text" style="width:500px; height:100px;"> </input>
+          </div>
+          <div class="text-center">
+            <button type= "submit" class="btn btn-success"> Post it!</button>
+          </div>
+
       <div class="height"></div>
 
 
