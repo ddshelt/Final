@@ -37,6 +37,23 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
+                    <div class="nav-item">
+                      <a class="nav-link" href="/contents/home">Home</a>
+                    </div>
+
+                    <div class="nav-item">
+                      <a class="nav-link" href="/contents/underground">Underground</a>
+                    </div>
+
+                    <div class="nav-item">
+                      <a class="nav-link" href="/contents/gossip">Gossip</a>
+                    </div>
+
+                    <div class="nav-item">
+                      <a class="nav-link" href="/contents/fashion">Fashion</a>
+                    </div>
+
+
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest

@@ -14,7 +14,7 @@ class ReactionController extends Controller
     public function index()
     {
         //
-        return "index";
+        return view('contents.index');
     }
 
     /**
@@ -25,7 +25,7 @@ class ReactionController extends Controller
     public function create()
     {
         //
-        return "create"; 
+        return "create";
 
     }
 

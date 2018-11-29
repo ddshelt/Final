@@ -28,6 +28,7 @@
 
 div.height{
   height: 250px;
+  background-color: #1F2124
 }
 
 .center {
@@ -50,13 +51,24 @@ body, html {
 
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/NYImage.jpg");
-  height: 25%;
+  height: 75%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 
 }
+
+.hero-image2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/ChicagoImage.jpg");
+  height: 75%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+}
+
 
 .hero-text {
   text-align: center;

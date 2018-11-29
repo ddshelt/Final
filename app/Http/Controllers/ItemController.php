@@ -48,7 +48,7 @@ class ItemController extends Controller
 
         $request->session()->flash('status', "A new comment was added");
 
-        return redirect('/items/create');
+        return redirect('/items/'. $reaction->item_id);
     }
 
     /**
@@ -61,7 +61,7 @@ class ItemController extends Controller
     {
         //
         $item = \App\Item::find($id);
-        return view('items.create', compact('item'));
+        return view('items.show', compact('item'));
 
     }
 
