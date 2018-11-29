@@ -8,9 +8,10 @@ use Carbon\Carbon;
 class Item extends Model
 {
     //
-    public function comments(){
+    public function comments() {
 
       return $this->hasMany('App\Reaction');
 
     }
+
 }

@@ -14,6 +14,7 @@ class ReactionController extends Controller
     public function index()
     {
         //
+        return "index";
     }
 
     /**
@@ -24,7 +25,8 @@ class ReactionController extends Controller
     public function create()
     {
         //
-        return view('contents.create');
+        return "create"; 
+
     }
 
     /**
@@ -36,17 +38,10 @@ class ReactionController extends Controller
     public function store(Request $request)
     {
         //
+        return "store";
 
 
-        $reaction = new \App\Reaction;
-        $reaction->comment = $request->input('itemcomment');
-        $reaction->item_id = $request->input('itemlist');
-        $reaction->user_id = \Auth::id();
-        $reaction->save();
 
-        $request->session()->flash('status', "A new comment was added");
-
-        return redirect('/contents/home');
     }
 
     /**
@@ -58,6 +53,7 @@ class ReactionController extends Controller
     public function show($id)
     {
         //
+        return "show";
     }
 
     /**
@@ -69,6 +65,7 @@ class ReactionController extends Controller
     public function edit($id)
     {
         //
+        return "edit";
     }
 
     /**
@@ -81,6 +78,7 @@ class ReactionController extends Controller
     public function update(Request $request, $id)
     {
         //
+        return "update";
     }
 
     /**
@@ -92,5 +90,6 @@ class ReactionController extends Controller
     public function destroy($id)
     {
         //
+        return "destroy";
     }
 }

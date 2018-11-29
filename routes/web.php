@@ -20,9 +20,9 @@ Route::get('/contents/home', function (){
 
   $albums = [
       'https://respect-mag.com/wp-content/uploads/2018/04/DAMN.kendrick.jpg',
-      'https://www.rap-up.com/app/uploads/2018/03/cardi-b-invasion-of-privacy.jpg',
-      'https://imagesaws.juno.co.uk/full/CS679658-01A-BIG.jpg',
       'http://www.xxlmag.com/files/2017/12/Nipsey-hussle-victory-lap.jpg',
+      'https://imagesaws.juno.co.uk/full/CS679658-01A-BIG.jpg',
+      'https://www.rap-up.com/app/uploads/2018/03/cardi-b-invasion-of-privacy.jpg',
       'https://i.redd.it/wmz0gkv8lcd11.jpg'
   ];
 
@@ -36,7 +36,7 @@ Route::get('/contents/home', function (){
 
 });
 
-Route::get('/contents/index', function (){
+Route::get('/index', function (){
   return view('contents.index');
 });
 
@@ -68,4 +68,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/contents', 'ReactionController');
 
-// Route::resource('contents', 'ItemController')->middleware('auth');
+Route::resource('/items', 'ItemController')->middleware('auth');

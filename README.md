@@ -56,4 +56,36 @@
 - Database should update once php artisan migrate:refresh --seed is ran
 - If fatal: CRLF would be replaced by LF in public/js/app.js. appears:
   + delete public/js/app.js
-  + run: npm run dev or prod 
+  + run: npm run dev or prod
+
+- Added Hero Image to the top of website
+  + div tags, and css
+
+- Corrected routing
+  - created view for comments to be created on individual items
+  - in web.php adjusted route to show id of current item being commented on
+    + Route::resource('/contents/{id}', 'ReactionController');
+
+- Established relationship between comments and items
+  + In Item Model:
+    - public function comments() {
+
+      return $this->hasMany('App\Reaction');
+
+    }
+
+- Established relationship between usernames and comments
+  + In the Reaction Model:
+    - public function user(){
+
+      return $this->belongsTo('App\User');
+
+    }
+
+- Connected comment link to Item controller
+  + In between @foreach and @endforeach
+    - <p class="text-center"><a href="/items/{{ $item->id }}"> Comment </a></p>
+
+- localhost:8000/items/(id#):
+  + populates a create page using Item Controller
+  + are able to add comments to database 

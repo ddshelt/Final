@@ -14,6 +14,7 @@ class ItemController extends Controller
     public function index()
     {
         //
+        return "show me a index";
 
     }
 
@@ -22,10 +23,12 @@ class ItemController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
         //
 
+        $item = \App\Item::find($id);
+        return view('items.create', compact('item'));
     }
 
     /**
@@ -36,13 +39,16 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        // $reaction = new \App\Reaction;
-        // $reaction->comment = $request->input('itemtitle');
-        // $reaction->save();
-        //
-        // $request->session()>flash('status', "A new comment was added");
-        // return redirect('/home');
+
+        $reaction = new \App\Reaction;
+        $reaction->comment = $request->input('itemcomment');
+        $reaction->item_id = $request->input('itemlist');
+        $reaction->user_id = \Auth::id();
+        $reaction->save();
+
+        $request->session()->flash('status', "A new comment was added");
+
+        return redirect('/items/create');
     }
 
     /**
@@ -54,8 +60,9 @@ class ItemController extends Controller
     public function show($id)
     {
         //
-        // $reaction = \App\Reaction::find($id);
-        // return view('contents.home', compact('itemtitle'));
+        $item = \App\Item::find($id);
+        return view('items.create', compact('item'));
+
     }
 
     /**
@@ -67,6 +74,7 @@ class ItemController extends Controller
     public function edit($id)
     {
         //
+        return "show me a edit page";
     }
 
     /**
@@ -79,6 +87,7 @@ class ItemController extends Controller
     public function update(Request $request, $id)
     {
         //
+        return "update page";
     }
 
     /**
@@ -90,5 +99,6 @@ class ItemController extends Controller
     public function destroy($id)
     {
         //
+        return "delete page";
     }
 }
