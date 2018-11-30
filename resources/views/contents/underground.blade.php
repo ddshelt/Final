@@ -1,12 +1,7 @@
 @extends('layouts.app')
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link href="/css/app.css" rel="stylesheet">
-  </head>
-  <body>
+
+@section('content')
+  
   <div class="hero-image2">
     <div class="hero-text">
       <h1 class= "header"> The Underground </h1>
@@ -64,5 +59,4 @@
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div> -->
-  </body>
-</html>
+@endsection

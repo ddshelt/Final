@@ -17,4 +17,6 @@ class Reaction extends Model
 
       return $this->belongsTo('App\User');
     }
+
+    protected $fillable = ['reaction','user_id','item_id'];
 }

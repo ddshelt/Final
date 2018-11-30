@@ -14,4 +14,8 @@ class Item extends Model
 
     }
 
+    public function likes() {
+      return $this->belongsToMany('App\User','reactions');
+    }
+
 }

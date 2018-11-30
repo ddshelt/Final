@@ -22,6 +22,7 @@ class CreateReactionsTable extends Migration
             $table->boolean('reaction')->nullable();
             $table->string('comment', 250)->nullable();
             $table->integer('rating')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

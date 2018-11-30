@@ -69,3 +69,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/contents', 'ReactionController');
 
 Route::resource('/items', 'ItemController')->middleware('auth');
+
+Route::get('/items/{id}/islikedbyme', 'ItemController@isLikedByMe');
+
+Route::post('/items/{id}/like', 'ItemController@like');

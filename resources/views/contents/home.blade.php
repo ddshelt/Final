@@ -1,95 +1,14 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link href="/css/app.css" rel="stylesheet">
-  </head>
-  <body>
-    <!-- <nav class="navbar navbar-default navbar-right text-center">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Logo</a>
-          <a href="#">HOME</a>
-          <a href="#band">BAND</a>
-          <a href="#tour">TOUR</a>
-          <a href="#contact">CONTACT</a>
-        </div>
-      </div>
-    </nav> -->
-
-    <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-        <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Left Side Of Navbar -->
-                <ul class="navbar-nav mr-auto">
-
-                </ul>
-
-                <!-- Right Side Of Navbar -->
-                <div class="nav-item">
-                  <a class="nav-link" href="/contents/home">Home</a>
-                </div>
-
-                <div class="nav-item">
-                  <a class="nav-link" href="/contents/underground">Underground</a>
-                </div>
-
-                <div class="nav-item">
-                  <a class="nav-link" href="/contents/gossip">Gossip</a>
-                </div>
-
-                <div class="nav-item">
-                  <a class="nav-link" href="/contents/fashion">Fashion</a>
-                </div>
+@extends('layouts.app')
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
 
-                <ul class="navbar-nav ml-auto">
-                    <!-- Authentication Links -->
-                    @guest
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            @if (Route::has('register'))
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            @endif
-                        </li>
-                    @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
 
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
-                    @endguest
-                </ul>
-            </div>
-        </div>
-    </nav>
+@section('content')
 
 
     <div class="hero-image">
       <div class="hero-text">
-        <h1 class= "header backgroundhead"> We Talk Culture </h1>
+        <h1 class= "header backgroundhead text-warning"> We Talk Culture </h1>
       </div>
     </div>
     <div class="container-fluid around">
@@ -101,6 +20,15 @@
                 <p><img class="mx-auto d-block" src="{{ $albums[$loop->index] }}" alt="$items" style="width:175px; height:175px;"></p>
 
                 <p class="text-center"><a href="/items/{{ $item->id }}"> Comment </a></p>
+
+                <form class="" method="post" action="/items/{{$item->id}}/like">
+                  {{csrf_field()}}
+                 <input name="likereaction" id="likereaction" class="center" type="hidden"></input>
+                   <button type="submit" class="btn btn-warning">
+                      <span class="fas fa-thumbs-up"></span>
+                   </button>
+                </form>
+
               </div>
             </div>
             @endforeach
@@ -132,8 +60,6 @@
               <option value="4">Invasion of Privacy</option>
               <option value="5">AstroWorld</option>
             </select>
-
-
 
           </div>
         </form>
@@ -177,9 +103,65 @@
       </div>
     </div>
 
+    <!-- <div class="height"></div>
+    <div class="height"></div> -->
     <div class="height"></div>
     <div class="height"></div>
 
+    <!-- <div class="container row text-center">
+      <div class="tour-image">
+        <div class="col-lg-12">
+          <div class="thumbnail">
+            <img src="/MeekMillImage.jpg" alt="Paris">
+              <div class="text-warning text-center">
+                <h2><strong>Meek Mill Announces "The Motivation" Tour</strong></h2>
+                <p>Fri. 27 November 2019</p>
+                <button class="btn">Buy Tickets</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <p class="text-warning text-center tour-text">
+      Meek Mill's highly anticipated first post-prison studio album, CHAMPIONSHIPS is due out this Friday. </br>
+      The rapper's been teasing the project for a few months, </br> reassuring fans that the album would arrive before the end of the year. </br>
+      As we approach the project's release date, Meek Mill has revealed tour dates for 2019.
+    </p>
+
+
+      <div class="row text-center mt-5 tour-dates">
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="/ParisImage.jpg" alt="Paris">
+              <div class="text-warning">
+                <p><strong>Paris</strong></p>
+                <p>Fri. 27 November 2019</p>
+                <button class="btn">Buy Tickets</button>
+              </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="/NewYorkImage.jpg" alt="New York">
+              <div class= "text-warning">
+                <p><strong>New York</strong></p>
+                <p>Sat. 28 November 2019</p>
+                <button class="btn">Buy Tickets</button>
+              </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="/SFImage.jpg" alt="San Francisco">
+              <div class="text-warning">
+                <p><strong>San Francisco</strong></p>
+                <p>Sun. 29 November 2015</p>
+                <button class="btn">Buy Tickets</button>
+              </div>
+          </div>
+        </div>
+      </div>
     <!-- <div class="card ml-5 mt-5" style="width: 18rem;">
       <img class="card-img-top" src=".../100px180/" alt="Card image cap">
       <div class="card-body">
@@ -188,5 +170,4 @@
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div> -->
-  </body>
-</html>
+@endsection

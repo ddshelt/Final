@@ -88,4 +88,16 @@
 
 - localhost:8000/items/(id#):
   + populates a create page using Item Controller
-  + are able to add comments to database 
+  + are able to add comments to database
+
+- Add Navbar
+  + extended layouts.app to all pages
+
+- Adding Like buttons
+  + edited reaction migrations
+  + set the relation between User model and Item model
+  + created routes for the likes (reactions)
+  + Added logic to the Item Controller
+  + pulled in thumbs up image using Font Awesome
+  + added the necessary code
+  + add like button logic

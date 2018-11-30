@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Item;
+use App\Reaction;
 
 class ItemController extends Controller
 {
@@ -100,5 +102,26 @@ class ItemController extends Controller
     {
         //
         return "delete page";
+    }
+
+    public function isLikedByMe($id)
+    {
+      $item = Item::findorFail($id)->first();
+      if (Reaction::whereUserId(Auth::id())->whereItemId($item->id)->exists()){
+        return 'true';
+      }
+      return 'false';
+    }
+
+    public function like($id)
+    {
+        $reaction = new \App\Reaction;
+        $reaction->reaction = true;
+        $reaction->item_id = $id;
+        $reaction->user_id = \Auth::id();
+        $reaction->save();
+
+        return redirect('/contents/home');
+
     }
 }
