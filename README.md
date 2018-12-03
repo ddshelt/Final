@@ -101,3 +101,5 @@
   + pulled in thumbs up image using Font Awesome
   + added the necessary code
   + add like button logic
+
+- Adding CSS styling

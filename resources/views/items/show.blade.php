@@ -6,9 +6,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{$item->title}}</div>
-
-                <div class="card-body">
+                <div class="card-header bg-secondary">{{$item->title}}
+                  <p><img class="mx-auto d-block" src="{{ $item->url }}" alt="$items" style="width:175px; height:175px;"></p>
+                  <p class="text-center">{{$item->description}}</p>
+                </div>
+                <div class="card-body bg-secondary">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}

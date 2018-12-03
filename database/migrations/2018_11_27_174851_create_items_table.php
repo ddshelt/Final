@@ -18,6 +18,7 @@ class CreateItemsTable extends Migration
             $table->string('title', 250);
             $table->string('subtitle', 250);
             $table->string('description', 500)->nullable();
+            $table->string('url')->nullable();
             $table->timestamps();
         });
     }

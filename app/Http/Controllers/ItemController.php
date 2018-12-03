@@ -65,6 +65,8 @@ class ItemController extends Controller
         $item = \App\Item::find($id);
         return view('items.show', compact('item'));
 
+        
+
     }
 
     /**

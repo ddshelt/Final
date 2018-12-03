@@ -40,6 +40,21 @@ Route::get('/index', function (){
   return view('contents.index');
 });
 
+Route::get('/items/', function (){
+
+  $albums = [
+      'https://respect-mag.com/wp-content/uploads/2018/04/DAMN.kendrick.jpg',
+      'http://www.xxlmag.com/files/2017/12/Nipsey-hussle-victory-lap.jpg',
+      'https://imagesaws.juno.co.uk/full/CS679658-01A-BIG.jpg',
+      'https://www.rap-up.com/app/uploads/2018/03/cardi-b-invasion-of-privacy.jpg',
+      'https://i.redd.it/wmz0gkv8lcd11.jpg'
+  ];
+
+  $items = \App\Item::get();
+
+  return view('items.show', compact('albums', 'items'));
+});
+
 Route::get('/contents/underground', function (){
 
   $mixtapes = [
