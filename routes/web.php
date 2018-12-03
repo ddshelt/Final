@@ -88,3 +88,5 @@ Route::resource('/items', 'ItemController')->middleware('auth');
 Route::get('/items/{id}/islikedbyme', 'ItemController@isLikedByMe');
 
 Route::post('/items/{id}/like', 'ItemController@like');
+
+Route::post('/items/{id}/dislike', 'ItemController@dislike');

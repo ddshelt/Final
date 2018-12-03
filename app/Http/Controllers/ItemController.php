@@ -65,7 +65,7 @@ class ItemController extends Controller
         $item = \App\Item::find($id);
         return view('items.show', compact('item'));
 
-        
+
 
     }
 
@@ -119,6 +119,18 @@ class ItemController extends Controller
     {
         $reaction = new \App\Reaction;
         $reaction->reaction = true;
+        $reaction->item_id = $id;
+        $reaction->user_id = \Auth::id();
+        $reaction->save();
+
+        return redirect('/contents/home');
+
+    }
+
+    public function dislike($id)
+    {
+        $reaction = new \App\Reaction;
+        $reaction->reaction = false;
         $reaction->item_id = $id;
         $reaction->user_id = \Auth::id();
         $reaction->save();

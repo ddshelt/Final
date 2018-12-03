@@ -102,4 +102,38 @@
   + added the necessary code
   + add like button logic
 
+
 - Adding CSS styling
+
+- # of likes populated on page
+- In Item model:
+  + public function likecount() {
+    return \DB::table('reactions')
+                    ->where('reaction',true)
+                    ->where('item_id', $this->id)
+                    ->count();
+  }
+
+  + In resources/views/contents/home :
+    - {{ $item->likecount() }}
+
+  + count now displayed by like button on home page.
+
+- Dislike button:
+  + created dislike function on Item Model
+  + created public function on Item controller from likes to reactions
+  + created dislike and like function
+    - public function dislike($id)
+    {
+        $reaction = new \App\Reaction;
+        $reaction->reaction = false;
+        $reaction->item_id = $id;
+        $reaction->user_id = \Auth::id();
+        $reaction->save();
+
+        return redirect('/contents/home');
+
+    }
+
+  + In web.php: created route to post
+    - Route::post('/items/{id}/dislike', 'ItemController@dislike');

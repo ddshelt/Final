@@ -10,7 +10,7 @@
 @import '~bootstrap/scss/bootstrap';
 
 .navbar-laravel {
-  background-color: #fff;
+  background-color: #1F2124;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
@@ -24,6 +24,12 @@
   text-align: center;
   font-family: 'Poor Story', Sans-serif;
   font-size: 80px;
+}
+
+.headerfont {
+    text-align: center;
+    font-family: 'Poor Story', Sans-serif;
+    font-size: 50px;
 }
 
 div.height{
@@ -44,6 +50,10 @@ div.height{
 body, html, #app {
     height: 100%;
     background-color: #1F2124;
+}
+
+.rumors {
+  background-color: #1F2124;
 }
 
 .backgroundhead {

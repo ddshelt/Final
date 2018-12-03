@@ -6,9 +6,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header bg-secondary">{{$item->title}}
+                <div class="card-header bg-secondary text-warning">{{$item->title}}
                   <p><img class="mx-auto d-block" src="{{ $item->url }}" alt="$items" style="width:175px; height:175px;"></p>
-                  <p class="text-center">{{$item->description}}</p>
+                  <p class="text-center text-warning">{{$item->description}}</p>
                 </div>
                 <div class="card-body bg-secondary">
                     @if (session('status'))
@@ -21,7 +21,7 @@
 
                    <form class="" method="post" action="/items">
                       {{csrf_field()}}
-                      <div class="form-group text-center">
+                      <div class="form-group text-center text-success">
                         <label for="itemcomment">Create Comment</label>
                         <input type="text" id="itemcomment" name="itemcomment" placeholder="What do you want to comment?" class="form-control input-lg text-center">
                         <!-- <input type="text" id="postpost" name="postpost" placeholder="Express how you feel today?" class="form-control input-lg text-center mt-3"> -->
