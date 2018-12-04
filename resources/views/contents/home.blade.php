@@ -81,6 +81,36 @@
       </form>
 
       <div class="height"></div>
+
+      <div class="container">
+        <h3 class="headerfont text-danger"> About Us </h3>
+        <div class="card text-center bg-secondary">
+          <div class="card-body bg-secondary">
+            <h5 class="card-title text-warning">Urban Hub for Hip Hop & Pop Culture</h5>
+            <p class="card-text text-warning">WTC is a place where hipsters and culture vultures alike can come together and express themselves
+              about topics ranging from music, fashion trends, to the latest gossip. We would like for
+              this application to function almost as a stress ball to the average music junkie. Meaning, we want for users to feel
+              a relief from using our site. Rather it be from helping the average listener weed through the overload of music we receive
+              from artists every Friday, rather it is the user being allowed to vent true feelings about a specific album without being chastised, or rather it be
+              a user wanting to tell another user to "shut up" because you are tired of logging on and seeing an album review that couldn't be
+              more wrong.</br>
+
+              This is a place for those with thicker skin, and a keen sense of what is deemed "cool" in 2018/2019.
+              The fashion blog is exactly that, but will be based around more of a buy-sell-trade. The gossip blog will always be filled
+              with the latest "tea" as well as offering users a chance for their findings to be headline news if thier story seems to check out.
+              We also offer another category for reviewing referred to as The Underground. Users will have the choice to participate in the mainstream
+              direction of the culture; as well as debate and learn all about the infamous underground scene.</br>
+
+              With Hip Hop constantly growing, and becoming over saturated with "One Hit Wonders", temporary fads, sub-genres. WTC is the perfect place to
+              voice where you think the state of the culture is headed, put into perspective where it should be headed, and how we can get there as an whole.
+              This is the perfect site to discover new music, spread knowledge about remaining independent vs. signing with  major label, and keep up with the
+              latest drops (music and fashion) all from the comfort of your keyboard.. ENJOY!
+            </p>
+        </div>
+      </div>
+
+      <div class="height"></div>
+
       <div class="container card rumors">
         <h3 class="headerfont text-danger"> Trending Topics </h3>
         <div class="accordion" id="accordionExample">

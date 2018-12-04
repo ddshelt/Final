@@ -1,4 +1,5 @@
 @extends('layouts.app')
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
 
 @section('content')
@@ -9,6 +10,15 @@
                 <div class="card-header bg-secondary text-warning">{{$item->title}}
                   <p><img class="mx-auto d-block" src="{{ $item->url }}" alt="$items" style="width:175px; height:175px;"></p>
                   <p class="text-center text-warning">{{$item->description}}</p>
+                  <button type="submit" class="btn btn-warning">
+                     <span class="fas fa-thumbs-up"></span>
+                  </button>
+                  {{ $item->likecount() }}
+
+                  <button type="submit" class="btn btn-warning">
+                     <span class="fas fa-thumbs-down"></span>
+                  </button>
+                  {{ $item->dislikecount() }}
                 </div>
                 <div class="card-body bg-secondary">
                     @if (session('status'))
@@ -53,7 +63,7 @@
                      @elseif($reaction->reaction)
                      <p class="card-text">{{ $reaction->user->name }} liked this post.</p>
                      @else
-                     <p class="card-text">{{ $reaction->user->name }} disliked this post.</p>
+                     <p class="card-text">disliked this post.</p>
                      @endif
                     </div>
                    @endforeach
