@@ -137,3 +137,10 @@
 
   + In web.php: created route to post
     - Route::post('/items/{id}/dislike', 'ItemController@dislike');
+
+  + On the Home blade:
+    - made sure form hit the correct controller method
+    - action="/items/{{$item->id}}/dislike"
+
+- Comment pages
+  + likes are now differentiated from comments 

@@ -48,7 +48,13 @@
                    <div class="card-body">
                      <h5 class="card-title"></h5>
                      <h6 class="card-subtitle mb-2 text-muted">{{$reaction->user->name}}</h6>
+                     @if($reaction->comment)
                      <p class="card-text">{{ $reaction->comment }}</p>
+                     @elseif($reaction->reaction)
+                     <p class="card-text">{{ $reaction->user->name }} liked this post.</p>
+                     @else
+                     <p class="card-text">{{ $reaction->user->name }} disliked this post.</p>
+                     @endif
                     </div>
                    @endforeach
 

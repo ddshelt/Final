@@ -236,30 +236,89 @@
       </div>
     </div>
 
-    <div class="height"></div>
-      <div class="DJvideo">
-        <iframe width="560" height="300" src="https://www.worldstarhiphop.com/embed/130727" frameborder="0" allowfullscreen></iframe>
-        <p class="text-danger text-center text-danger mt-2">
-          Is DJ Akademiks the reason why Tekashi 69 is in jail?
-        </p>
-      </div>
 
-      <div class="Emvideo">
-        <iframe width="560" height="315" src="https://www.worldstarhiphop.com/embed/130802" frameborder="0" allowfullscreen></iframe>
-        <p class="text-danger text-center mt-2"> Freestyle x Eminem </p>
-      </div>
     <div class="height"></div>
+
+    <div class="LNvideo">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0UTErUgIdpk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p class="text-danger text-center text-danger mt-2">
+          Long Neck Exposed! | No Jumper
+        </p>
+    </div>
+
+    <div class="APvideo">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hBM7lDowLzQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p class="text-danger text-center text-danger mt-2">
+          Anderson Paak | The Breakfast Club Interview  (Full Episode)
+        </p>
+    </div>
+
+    <div class="YDvideo">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/HHZXWSY2yUs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p class="text-danger text-center text-danger mt-2">
+          Young Dolph | Drink Champs (Full Episode)
+        </p>
+    </div>
+
+    <div class="LBvideo">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VS0utODCw2E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p class="text-danger text-center text-danger mt-2">
+          Lil Baby- "PREACHERMAN" Official Documentary
+        </p>
+    </div>
+
+    <div class="FSRvideo">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XZ3kj6WICLE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p class="text-danger text-center text-danger mt-2">
+          Is Lena Waithe Hollywood's Biggest Sneakerhead? | Full Size Run
+        </p>
+    </div>
+
+
+    <div class="QRvideo">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/WxqqKO_4VBQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p class="text-danger text-center text-danger mt-2">
+          Day in the Life | Quando Rondo
+        </p>
+    </div>
+
+    <div class="ESvideo">
+        <iframe width="560" height="300" src="https://www.youtube.com/embed/ZVoSs7sHijw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p class="text-danger text-center text-danger mt-2">
+          Everyday Struggle
+        </p>
+    </div>
+
+    <div class="Joevideo">
+        <iframe width="560" height="300" src="https://www.youtube.com/embed/wWX-q3vSOII" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p class="text-danger text-center text-danger mt-2">
+          The Joe Budden Podcast Episode 201 | What's your name?
+        </p>
+    </div>
+
+    <div class="DJvideo">
+      <iframe width="560" height="300" src="https://www.worldstarhiphop.com/embed/130727" frameborder="0" allowfullscreen></iframe>
+      <p class="text-danger text-center text-danger mt-2">
+        Is DJ Akademiks the reason why Tekashi 69 is in jail?
+      </p>
+    </div>
+
+    <div class="Emvideo">
+      <iframe width="560" height="300" src="https://www.worldstarhiphop.com/embed/130802" frameborder="0" allowfullscreen></iframe>
+      <p class="text-danger text-center mt-2"> 11 min Freestyle x Eminem </p>
+    </div>
+
 
     <div class="JBvideo">
       <iframe width="560" height="300" src="https://www.youtube.com/embed/s_eilRAWhO0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <p class="text-danger text-center mt-2"> Justin Beiber in the "hood" !?!</p>
     </div>
 
-
     <div class="TScottvideo">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/PJWHAiDARMQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="300" src="https://www.youtube.com/embed/PJWHAiDARMQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <p class="text-danger text-center mt-2"> Yosemite x Travis Scott (2018)</p>
     </div>
+
 
     <div class="height"></div>
     <div class="height"></div>
